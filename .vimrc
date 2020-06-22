@@ -1,6 +1,3 @@
-" Specify a directory for plugins
-" - For Neovim: stdpath('data') . '/plugged'
-" - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
 Plug 'sickill/vim-monokai'
@@ -25,3 +22,14 @@ set wildmenu
 
 filetype indent on
 set showmatch
+
+nnoremap ù {
+vnoremap ù {
+nnoremap * }
+vnoremap * }
+nnoremap z b
+vnoremap z b
+nnoremap x dd
+vnoremap x dd
+nnoremap d "_dd
+vnoremap d "_dd
