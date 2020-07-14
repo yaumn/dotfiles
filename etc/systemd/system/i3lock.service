@@ -1,0 +1,16 @@
+[Unit]
+Description=Lock screen before suspend
+Before=sleep.target
+
+[Service]
+User=yaumn
+Type=simple
+Environment=DISPLAY=:0
+ExecStart=/usr/bin/i3lock --color=000000 --ignore-empty-password --nofork
+ExecStartPost=/usr/bin/sleep 1
+TimeoutSec=infinity
+
+[Install]
+WantedBy=sleep.target
+WantedBy=suspend.target
+WantedBy=hibernate.target
